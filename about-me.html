@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/book-icon-32x32.png">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css_new.css">
+    
+    <!-- jQuery & Flipbook Scripts -->
+    <script src="jquery.js"></script>
+    <script src="turn.js"></script>
+    <script src="script.js"></script>
+
+    <div class="navbardiv"></div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="about-me.html">ABOUT ME</a></li>
+            <li><a href="why-read.html">WHY READ?</a></li>
+            <li><a href="favorites.html">FAVORITES</a></li>
+            <li><a href="quotes.html">QUOTES</a></li>
+            <li><a href="recs.html">RECOMMENDATIONS</a></li>
+            <li><a href="my-library.html">MY LIBRARY</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
+        </ul>
+    </nav>
+</head>
+<body>
+    <div class="banner">
+        <div class="upper-text-big">Open the Book!</div>
+        <div class="flipbook">
+
+            <div class="hard cover-image">
+                <img src="images/cover-4.png" alt="Front Cover">
+            </div>
+            <div class="hard"></div>
+    
+            <!-- Page 1 -->
+            <div class="page">
+                <div class="page-content">
+                    <h2>Hello There! 👋</h2>
+                    <p>I'm Dheetchanya, 19 years old, and I’m passionate about many things! I enjoy programming, capturing life through photography, and of course, reading books that take me to different worlds. Each of these hobbies gives me a creative outlet and keeps me inspired.</p>
+                </div>
+            </div>
+
+            <!-- Page 2 -->
+            <div class="page">
+                <div class="page-image">
+                    <img src="images/dheetch-1-1.jpg" alt="Right Page Image 1">
+                </div>
+            </div>
+
+            <!-- Page 3 -->
+            <div class="page">
+                <div class="page-content">
+                    <h2>A Bit About Me 🌟</h2>
+                    <p>I'm an extrovert with a big smile and even bigger energy! I'm outgoing, confident, and love working with people. Whether it's leading a team or collaborating with one, I bring enthusiasm, perseverance, and a strong sense of responsibility to everything I do.</p>
+                </div>
+            </div>
+
+            <!-- Page 4 -->
+            <div class="page">
+                <div class="page-image">
+                    <img src="images/dheetch6.jpg" alt="Right Page Image 2">
+                </div>
+            </div>
+
+            <!-- Page 5 -->
+            <div class="page">
+                <div class="page-content">
+                    <h2>Where It All Began ✨</h2>
+                    <p>My passion for reading was sparked at a young age, thanks to my mother’s encouragement. She introduced me to picture books before I even learned to read, and I quickly fell in love with stories. By age four, books were already a huge part of my life.</p>
+                </div>
+            </div>
+
+            <!-- Page 6 -->
+            <div class="page">
+                <div class="page-image">
+                    <img src="images/dheetch4.JPG" alt="Right Page Image 3">
+                </div>
+            </div>
+
+            <!-- Page 7 -->
+            <div class="page">
+                <div class="page-content">
+                    <h2>The Colored Pencil Quest ✏️</h2>
+                    <p>When I lived in Singapore, I visited different libraries with my mom. Each library gave out a unique colored pencil — and collecting them all became our fun little mission! It made reading feel like an adventure, one colored pencil at a time.</p>
+                </div>
+            </div>
+
+            <!-- Page 8 -->
+            <div class="page">
+                <div class="page-image">
+                    <img src="images/dheetch1.jpg" alt="Right Page Image 4">
+                </div>
+            </div>
+
+            <!-- Page 9 -->
+            <div class="page">
+                <div class="page-content">
+                    <h2>Wrapping Up 💬</h2>
+                    <p>Thank you for flipping through these pages and getting to know a part of my story. I hope this inspires you to explore your passions, pick up a book, or simply do more of what makes you feel alive. Never stop learning, and never stop dreaming!</p>
+                    <br>
+                    <p><em>~ Dheetchanya</em></p>
+                </div>
+            </div>
+
+            <!-- Page 10 -->
+            <div class="page">
+                <div class="page-image">
+                    <img src="images/dheetch5.jpg" alt="Right Page Image 4">
+                </div>
+            </div>
+
+            <!-- Page 11 -->
+            <div class="page">
+                <div class="page-content">
+                    <h2>Contact 📞</h2>
+                    <p>
+                        Feel free to reach out to me! <br>
+                        📧 <a href="mailto:dheetchanya.m@gmail.com">dheetchanya.m@gmail.com</a> <br>
+                        📱 <a href="#" onclick="copyPhoneNumber()">97907 47881</a>
+                    </p>
+                </div>
+            </div>
+    
+            <!-- Page 10 -->
+            <div class="hard cover-image">
+                <img src="images/back-cover-4.png" alt="Back Cover">
+            </div>            
+        </div>
+    </div>
+    
+    <!-- Initialize Flipbook -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            $(".flipbook").turn();
+        });
+
+        function copyPhoneNumber() {
+            navigator.clipboard.writeText("9**** ****0").then(() => {
+                alert("Phone number copied to clipboard!");
+            }).catch(err => {
+                console.error("Failed to copy text: ", err);
+        });
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quotes</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="images/book-icon-32x32.png">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css_new.css" />
+
+  <div class="navbardiv"></div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="about-me.html">ABOUT ME</a></li>
+            <li><a href="why-read.html">WHY READ?</a></li>
+            <li><a href="favorites.html">FAVORITES</a></li>
+            <li><a href="quotes.html">QUOTES</a></li>
+            <li><a href="recs.html">RECOMMENDATIONS</a></li>
+            <li><a href="my-library.html">MY LIBRARY</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
+        </ul>
+    </nav>
+</head>
+
+<body>
+  <div class="banner">
+    <div class="wrapper">
+        <div class="upper-text">
+          Here are some quotes from books I’ve read that left an impression on me. If any resonate with you too, feel free to hit the heart to save them to your favorites, or copy them into your notes for later.
+        </div>
+      <div class="container">
+        <div class="button-container">
+          <button id="favorite-btn"><i class="fa-regular fa-heart"></i></button>
+          <button id="show-list"><i class="fa-solid fa-list"></i></button>
+          <button id="copy-btn"><i class="fa-solid fa-copy"></i></button>
+        </div>
+        <p id="quote">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas,
+          magni.
+        </p>
+        <h3 id="author">Lorem, ipsum.</h3>
+        <button id="btn">Generate</button>
+      </div>
+    </div>
+
+    <div class="favorite-container">
+      <h3>Favorite Quotes</h3>
+      <ul id="list-of-favorite-quotes"></ul>
+      <button id="clear-button">Clear</button>
+      <button id="close-favorite">Close</button>
+    </div>
+
+    <script src="./script.js"></script>
+  </div>
+</body>
+
+</html>

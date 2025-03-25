@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="css_new.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="navbardiv"></div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="about-me.html">ABOUT ME</a></li>
+            <li><a href="why-read.html">WHY READ?</a></li>
+            <li><a href="favorites.html">FAVORITES</a></li>
+            <li><a href="quotes.html">QUOTES</a></li>
+            <li><a href="recs.html">RECOMMENDATIONS</a></li>
+            <li><a href="my-library.html">MY LIBRARY</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
+        </ul>
+    </nav>
+
+    <div class="gallery-slider">
+        <div class="gallery-list">
+            <div class="gallery-item">
+            <img src="images/gallery-1.jpg" alt="">
+            <div class="caption"> "A Splash of Color and Nostalgia" – This vibrant illustration from a Thea Stilton book takes me right back to middle school. The colorful pages of stories like these made me fall in love with reading, turning every book into an adventure.</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/gallery-2.jpg" alt="">
+            <div class="caption">"Maps, Magic, and Middle-earth" – The map from The Lord of the Rings (found at the back of the book) is a reminder that even though I no longer read illustrated children’s books, details like this still captivate me. There’s something timeless about tracing Tolkien’s world with my fingertips.</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/gallery-3.jpg" alt="">
+            <div class="caption">"Costumes of the Final Frontier" – A fascinating glimpse into Star Trek costume design from an old, second-hand treasure: Star Trek Guide. Even beyond the show itself, the creativity behind the sci-fi aesthetic is just as thrilling to explore.</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/gallery-4.jpg" alt="">
+            <div class="caption">"The Stars in My Hands" – A breathtaking constellation map from Our Universe, stretching across two pages, marked “Northern Spring Looking North.” There’s something humbling about seeing the vastness of space laid out in ink, like holding the night sky in a book.</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/gallery-5.jpg" alt="">
+            <div class="caption">"A Gift in Every Word" – The first page of one of my books holds something even more special than the story inside: "To Dheetchi, From Amma – 26 Jan 2021." A reminder that every book is more than just pages—it’s a gift, a memory, a little piece of love.</div>
+        </div>
+        </div>
+        <div class="gallery-buttons">
+            <button id="prev"><</button>
+            <button id="next">></button>
+        </div>
+        <ul class="dots">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    
+        <script>
+            let slider = document.querySelector('.gallery-slider .gallery-list');
+            let items = document.querySelectorAll('.gallery-slider .gallery-list .gallery-item');
+            let next = document.getElementById('next');
+            let prev = document.getElementById('prev');
+            let dots = document.querySelectorAll('.gallery-slider .dots li');
+
+            let lengthItems = items.length - 1;
+            let active = 0;
+            next.onclick = function(){
+                active = active + 1 <= lengthItems ? active + 1 : 0;
+                reloadSlider();
+            }
+            prev.onclick = function(){
+                active = active - 1 >= 0 ? active - 1 : lengthItems;
+                reloadSlider();
+            }
+            let refreshInterval = setInterval(()=> {next.click()}, 5000);
+            function reloadSlider(){
+                slider.style.left = -items[active].offsetLeft + 'px';
+                
+                let last_active_dot = document.querySelector('.gallery-slider .dots li.active');
+                last_active_dot.classList.remove('active');
+                dots[active].classList.add('active');
+
+                clearInterval(refreshInterval);
+                refreshInterval = setInterval(()=> {next.click()}, 5000);
+
+                
+            }
+
+            dots.forEach((li, key) => {
+                li.addEventListener('click', ()=>{
+                    active = key;
+                    reloadSlider();
+                })
+            })
+            window.onresize = function(event) {
+                reloadSlider();
+            };
+
+        </script>
+</body>
+</html>

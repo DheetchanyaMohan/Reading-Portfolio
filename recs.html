@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendations</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/book-icon-32x32.png">
+    <link rel="stylesheet" href="css_new.css">
+    <script src="quiz-script.js"></script>
+    
+    <div class="navbardiv"></div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="home.html">HOME</a></li>
+            <li><a href="about-me.html">ABOUT ME</a></li>
+            <li><a href="why-read.html">WHY READ?</a></li>
+            <li><a href="favorites.html">FAVORITES</a></li>
+            <li><a href="quotes.html">QUOTES</a></li>
+            <li><a href="recs.html">RECOMMENDATIONS</a></li>
+            <li><a href="my-library.html">MY LIBRARY</a></li>
+            <li><a href="gallery.html">GALLERY</a></li>
+        </ul>
+    </nav>
+</head>
+<body>
+    <div class="banner">
+        <div class="upper-text">
+            Not sure what to pick up next? This quick quiz will help match you with a book that fits your mood!
+        </div>
+        <div class="quiz-container">
+            <h2>What Should You Read Next?</h2>
+            <form id="book-quiz">
+              
+              <div class="question">
+                <label>What’s your current mood?</label>
+                <div class="options-container">
+                    <div class="option">
+                        <img src="images/adventure.jpg" alt="Adventurous" loading="lazy">
+                        <input type="radio" id="adventure" name="mood" value="adventure"><span>Adventurous</span>
+                        <!-- <label for="adventure">Adventurous</label> -->
+                    </div>
+                    <div class="option">
+                        <img src="images/pleasant.jpg" alt="pleasant" loading="lazy">
+                        <input type="radio" id="pleasant" name="mood" value="pleasant"><span>Pleasant</span>
+                        <!-- <label for="pleasant">pleasant</label> -->
+                    </div>
+                    <div class="option">
+                        <img src="images/reflective.jpg" alt="Reflective" loading="lazy">
+                        <input type="radio" id="reflective" name="mood" value="reflective"><span>Reflective</span>
+                        <!-- <label for="reflective">Reflective</label> -->
+                    </div>
+                    <div class="option">
+                        <img src="images/energetic.jpg" alt="Energetic" loading="lazy">
+                        <input type="radio" id="energetic" name="mood" value="energetic"><span>Energetic</span>
+                        <!-- <label for="energetic">Energetic</label> -->
+                    </div>
+                    <div class="option">
+                        <img src="images/curious.jpg" alt="Curious" loading="lazy">
+                        <input type="radio" id="curious" name="mood" value="curious"><span>Curious</span>
+                        <!-- label for="curious">Curious</label> -->
+                    </div>
+                </div>
+            </div>
+          
+            <div class="question">
+                <label>If you could go anywhere right now, where would it be?</label>
+                <div class="options-container">
+                    <div class="option">
+                        <img src="images/forest.jpg" alt="An enchanted forest" loading="lazy">
+                        <input type="radio" id="forest" name="place" value="forest"><span>An enchanted forest</span>
+                    </div>
+                    <div class="option">
+                        <img src="images/coastal.jpg" alt="A cozy seaside town" loading="lazy">
+                        <input type="radio" id="coastal" name="place" value="coastal"><span>A cozy seaside town</span>
+                    </div>
+                    <div class="option">
+                        <img src="images/future.jpg" alt="A high-tech futuristic world" loading="lazy">
+                        <input type="radio" id="future" name="place" value="future"><span>A high-tech futuristic world</span>
+                    </div>
+                    <div class="option">
+                        <img src="images/past.jpg" alt="A grand historical city" loading="lazy">
+                        <input type="radio" id="past" name="place" value="past"><span>A grand historical city</span>
+                    </div>
+                    <div class="option">
+                        <img src="images/imaginary.jpg" alt="A place that only exists in your imagination" loading="lazy">
+                        <input type="radio" id="imaginary" name="place" value="imaginary"><span>An imaginary place</span>
+                    </div>
+                </div>
+            </div>
+            
+          
+            <div class="question">
+                <label>What kind of person would you love to interview?</label>
+                <div class="options-container">
+                    <div class="option">
+                        <img src="images/alien.png" alt="A mysterious alien" loading="lazy">
+                        <input type="radio" id="outsider" name="character" value="outsider"><span>A mysterious alien</span>
+                    </div>
+                    <div class="option">
+                        <img src="images/inventor.jpg" alt="A genius inventor" loading="lazy">
+                        <input type="radio" id="inventor" name="character" value="inventor"><span>A genius inventor</span>
+                    </div>
+                    <div class="option">
+                        <img src="images/fighter.jpg" alt="A determined warrior" loading="lazy">
+                        <input type="radio" id="fighter" name="character" value="fighter"><span>A determined warrior</span>
+                    </div>
+                    <div class="option">
+                        <img src="images/royal.jpg" alt="A time-traveling royal" loading="lazy">
+                        <input type="radio" id="royal" name="character" value="royal"><span>A time-traveling royal</span>
+                    </div>
+                    <div class="option">
+                        <img src="images/trickster.jpg" alt="A mischievous trickster" loading="lazy">
+                        <input type="radio" id="trickster" name="character" value="trickster"><span>A mischievous trickster</span>
+                    </div>
+                </div>
+            </div>            
+            
+            <div class="question">
+                <label>What kind of journey are you in the mood for?</label>
+                <div class="options-container">
+                    <div class="option">
+                        <img src="images/inner.jpg" alt="An inner transformation" loading="lazy">
+                        <input type="radio" id="inner" name="journey" value="inner"><span>An inner transformation</span>
+                    </div>
+                    <div class="option">
+                        <img src="images/connection.jpg" alt="A slow-burning connection" loading="lazy">
+                        <input type="radio" id="connection" name="journey" value="pleasant"><span>A slow-burning connection</span>
+                    </div>
+                    <div class="option">
+                        <img src="images/epic.jpg" alt="A daring quest" loading="lazy">
+                        <input type="radio" id="epic" name="journey" value="epic"><span>A daring quest</span>
+                    </div>
+                    <div class="option">
+                        <img src="images/mystery.jpg" alt="A search for the truth" loading="lazy">
+                        <input type="radio" id="mystery" name="journey" value="mystery"><span>A search for the truth</span>
+                    </div>
+                    <div class="option">
+                        <img src="images/discovery.jpg" alt="An unexpected discovery" loading="lazy">
+                        <input type="radio" id="discovery" name="journey" value="discovery"><span>An unexpected discovery</span>
+                    </div>
+                </div>
+            </div>
+            
+          
+            <div class="question">
+                <label>Which of these movies brings back childhood memories?</label>
+                <div class="options-container">
+                    <div class="option">
+                        <img src="images/nayakan.jpg" alt="Nayakan (1987)" loading="lazy">
+                        <input type="radio" id="70s" name="age-group" value="80s"><span>Nayakan (1987)</span>
+                    </div>
+                    <div class="option">
+                        <img src="images/baasha.jpg" alt="Baashha (1995)" loading="lazy">
+                        <input type="radio" id="80s" name="age-group" value="90s"><span>Baashha (1995)</span>
+                    </div>
+                    <div class="option">
+                        <img src="images/ghilli.jpg" alt="Ghilli (2004)" loading="lazy">
+                        <input type="radio" id="90s" name="age-group" value="2000s"><span>Ghilli (2004)</span>
+                    </div>
+                    <div class="option">
+                        <img src="images/enthiran.jpg" alt="Enthiran (2010)" loading="lazy">
+                        <input type="radio" id="2000s" name="age-group" value="2010s"><span>Enthiran (2010)</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <label>What type of movies do you usually enjoy?</label>
+                <div class="options-container">
+                    <div class="option">
+                        <img src="images/drama.jpg" alt="Emotional drama" loading="lazy">
+                        <input type="radio" id="drama" name="movie-type" value="drama"><span>Emotional drama</span>
+                    </div>
+                    <div class="option">
+                        <img src="images/comedy.jpg" alt="Feel-good comedy" loading="lazy">
+                        <input type="radio" id="comedy" name="movie-type" value="comedy"><span>Feel-good comedy</span>
+                    </div>
+                    <div class="option">
+                        <img src="images/thriller.jpg" alt="Psychological thriller" loading="lazy">
+                        <input type="radio" id="thriller" name="movie-type" value="thriller"><span>Psychological thriller</span>
+                    </div>
+                    <div class="option">
+                        <img src="images/fantasy.jpg" alt="Epic fantasy" loading="lazy">
+                        <input type="radio" id="fantasy" name="movie-type" value="fantasy"><span>Epic fantasy</span>
+                    </div>
+                    <div class="option">
+                        <img src="images/slice-of-life.jpg" alt="Slice-of-life stories" loading="lazy">
+                        <input type="radio" id="slice-of-life" name="movie-type" value="slice-of-life"><span>Slice-of-life stories</span>
+                    </div>
+                </div>
+            </div>
+            
+          
+            <div class="question">
+                <label>Which activity sounds most appealing right now?</label>
+                <div class="options-container">
+                    <div class="option">
+                        <img src="images/travel.jpg" alt="Taking a spontaneous trip" loading="lazy">
+                        <input type="radio" id="travel" name="activity" value="travel"><span>Taking a spontaneous trip</span>
+                    </div>
+                    <div class="option">
+                        <img src="images/cook.jpg" alt="Trying a new recipe" loading="lazy">
+                        <input type="radio" id="cook" name="activity" value="cook"><span>Trying a new recipe</span>
+                    </div>
+                    <div class="option">
+                        <img src="images/debate.jpg" alt="Having a deep debate" loading="lazy">
+                        <input type="radio" id="debate" name="activity" value="debate"><span>Having a deep debate</span>
+                    </div>
+                    <div class="option">
+                        <img src="images/chill.jpg" alt="Chilling with music or a movie" loading="lazy">
+                        <input type="radio" id="chill" name="activity" value="chill"><span>Chilling with music</span>
+                    </div>
+                    <div class="option">
+                        <img src="images/craft.jpg" alt="Starting a DIY or creative project" loading="lazy">
+                        <input type="radio" id="craft" name="activity" value="craft"><span>Starting a creative project</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="question">
+                <label>What kind of ending do you enjoy?</label>
+                <div class="options-container">
+                    <div class="option">
+                        <img src="images/happy.jpg" alt="A satisfying, happy ending" loading="lazy">
+                        <input type="radio" id="happy" name="ending" value="happy"><span>A satisfying, happy ending</span>
+                    </div>
+                    <div class="option">
+                        <img src="images/open.jpg" alt="An open-ended one" loading="lazy">
+                        <input type="radio" id="open" name="ending" value="open"><span>An open-ended one</span>
+                    </div>
+                    <div class="option">
+                        <img src="images/tragic.jpg" alt="Bittersweet or tragic" loading="lazy">
+                        <input type="radio" id="tragic" name="ending" value="tragic"><span>Bittersweet or tragic</span>
+                    </div>
+                    <div class="option">
+                        <img src="images/twist.jpg" alt="A shocking plot twist" loading="lazy">
+                        <input type="radio" id="twist" name="ending" value="twist"><span>A shocking plot twist</span>
+                    </div>
+                    <div class="option">
+                        <img src="images/moral.jpg" alt="A thoughtful lesson or moral" loading="lazy">
+                        <input type="radio" id="moral" name="ending" value="moral"><span>A thoughtful lesson/moral</span>
+                    </div>
+                </div>
+            </div>  
+            <button type="submit" id="submit">Submit</button>
+            </form>
+          </div>
+          <div id="quiz-output"></div>
+      </div>
+</body>
+</html>
